@@ -1,0 +1,26 @@
+{
+  "name": "@scm-manager/{{.artifactId}}",
+  "private": true,
+  "version": "{{.version}}",
+  "license": "BSD-3-Clause",
+  "main": "./src/main/js/index.tsx",
+  "scripts": {
+    "build": "ui-scripts plugin",
+    "watch": "ui-scripts plugin-watch"
+  },
+  "dependencies": {
+    "@scm-manager/ui-plugins": "latest"
+  },
+  "babel": {
+    "presets": [
+      "@scm-manager/babel-preset"
+    ]
+  },
+  "jest": {
+    "preset": "@scm-manager/jest-preset"
+  },
+  "prettier": "@scm-manager/prettier-config",
+  "eslintConfig": {
+    "extends": "@scm-manager/eslint-config"
+  }
+}

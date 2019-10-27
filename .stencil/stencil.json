@@ -1,0 +1,45 @@
+{
+  "directory": "{{.artifactId}}",
+  "files": [{
+    "source": "java",
+    "target": "src/main/java/{{.package | toJavaPath}}"
+  }],
+  "schema": {
+    "title": "SCM-Manager Plugin",
+    "type": "object",
+    "required": ["artifactId", "name", "version", "description", "package"],
+    "properties": {
+      "artifactId": {
+        "type": "string",
+        "title": "Artifact ID",
+        "pattern": "^scm-.*-plugin$"
+      },
+      "name": {
+        "type": "string",
+        "title": "Name"
+      },
+      "version": {
+        "type": "string",
+        "title": "Version",
+        "default": "1.0.0-SNAPSHOT"
+      },
+      "description": {
+        "type": "string",
+        "title": "Description"
+      },
+      "package": {
+        "type": "string",
+        "title": "Package",
+        "pattern": "^[a-z][a-z0-9_]*(\\.[a-z0-9_]+)+[0-9a-z_]$"
+      }
+    }
+  },
+  "uiSchema": {
+    "artifactId": {
+      "ui:autofocus": true
+    },
+    "description": {
+      "ui:widget": "textarea"
+    }
+  }
+}
