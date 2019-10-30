@@ -12,7 +12,7 @@
   </conditions>
 
   <resources>
-    <script>assets/{{.artefactId}}.bundle.js</script>
+    <script>assets/{{.artifactId}}.bundle.js</script>
   </resources>
 
 </plugin>
