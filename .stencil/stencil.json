@@ -1,5 +1,5 @@
 {
-  "directory": "{{.artifactId}}",
+  "project": "{{.artifactId}}",
   "files": [{
     "source": "java",
     "target": "src/main/java/{{.package | toJavaPath}}"
