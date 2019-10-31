@@ -14,7 +14,7 @@
   <version>{{.version}}</version>
   <name>{{.name}}</name>
   <packaging>smp</packaging>
-  <url>https://bitbucket.org/scm-manager/{{.artifactId}}</url>
+  <url>https://github.com/scm-manager/{{.artifactId}}</url>
   <description>{{.description}}</description>
 
   <scm>
