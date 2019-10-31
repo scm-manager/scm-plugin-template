@@ -4,6 +4,9 @@
     "source": "java",
     "target": "src/main/java/{{.package | toJavaPath}}"
   }],
+  "copy": [
+    "*.jar"
+  ],
   "schema": {
     "title": "SCM-Manager Plugin",
     "type": "object",
