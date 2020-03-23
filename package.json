@@ -2,7 +2,7 @@
   "name": "@scm-manager/{{.artifactId}}",
   "private": true,
   "version": "{{.version}}",
-  "license": "BSD-3-Clause",
+  "license": "MIT",
   "main": "./src/main/js/index.tsx",
   "scripts": {
     "build": "ui-scripts plugin",
