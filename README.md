@@ -49,7 +49,7 @@ A quick look at the files and directories you'll see in a SCM-Manager project.
     ├── .editorconfig
     ├── .gitignore
     ├── CHANGELOG.md
-    ├── LICENSE
+    ├── LICENSE.txt
     ├── package.json
     ├── pom.xml
     ├── README.md
@@ -74,7 +74,7 @@ A quick look at the files and directories you'll see in a SCM-Manager project.
 
 5.  **`CHANGELOG.md`**: All notable changes to this project will be documented in this file.
 
-6.  **`LICENSE`**: This project is licensed under the MIT license.
+6.  **`LICENSE.txt`**: This project is licensed under the MIT license.
 
 7.  **`package.json`**: Here you can find the dependency/build configuration and dependencies for the frontend.
 
