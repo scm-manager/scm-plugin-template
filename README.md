@@ -9,6 +9,10 @@
 
 {{.description}}
 
+## Documentation
+
+Find out how this plugin works on the [plugin documentation page](https://www.scm-manager.org/plugins/{{.artifactId}}/docs/).
+
 ## Build and testing
 
 The plugin can be compiled and packaged with the normal maven lifecycle:
