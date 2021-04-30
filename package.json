@@ -5,13 +5,14 @@
   "license": "MIT",
   "main": "./src/main/js/index.tsx",
   "scripts": {
-    "build" : "ui-scripts plugin",
-    "watch" : "ui-scripts plugin-watch",
+    "build" : "plugin-scripts build",
+    "watch" : "plugin-scripts watch",
     "test" : "jest",
-    "postinstall" : "ui-plugins postinstall"
+    "postinstall" : "plugin-scripts postinstall"
   },
   "dependencies": {
-    "@scm-manager/ui-plugins" : "2.0.0"
+    "@scm-manager/ui-plugins" : "2.0.0",
+    "@scm-manager/plugin-scripts": "^1.0.2"
   },
   "babel": {
     "presets": [
