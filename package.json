@@ -12,7 +12,7 @@
   },
   "devDependencies": {
     "@scm-manager/ui-plugins" : "2.0.0",
-    "@scm-manager/plugin-scripts": "^1.0.3"
+    "@scm-manager/plugin-scripts": "^1.1.0"
   },
   "babel": {
     "presets": [
