@@ -299,10 +299,10 @@
     "@nodelib/fs.scandir" "2.1.4"
     fastq "^1.6.0"
 
-"@scm-manager/plugin-scripts@^1.0.3":
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/@scm-manager/plugin-scripts/-/plugin-scripts-1.0.3.tgz#18b1c1682ff261e695ff124fab846080a6421666"
-  integrity sha512-vXb1bSlqwiQVYp3qwuxeFWi4l8yJSAVcsiaxi5yrB5un18owPKkUMRwZnuoTEEJ+WxaIoAa2NRWw5qp3bDn5iQ==
+"@scm-manager/plugin-scripts@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@scm-manager/plugin-scripts/-/plugin-scripts-1.1.0.tgz#177373361579d0dd37cff40780951f73e32ac687"
+  integrity sha512-oIS088kF6X4V7k3kQ0wJ8AWbt1kIrul5OAMRrCNrEpYDkPBYey6s7jW6V1sj2R5Hj/y2+PaEXlc9P0SLFB5+Og==
   dependencies:
     babel-loader "^8.0.6"
     css-loader "^3.2.0"
@@ -3799,9 +3799,9 @@ postcss-value-parser@^4.1.0:
   integrity sha512-97DXOFbQJhk71ne5/Mt6cOu6yxsSfM0QGQyl0L25Gca4yGWEGJaig7l7gbCX623VqTBNGLRLaVUCnNkcedlRSQ==
 
 postcss@^7.0.14, postcss@^7.0.32, postcss@^7.0.5, postcss@^7.0.6:
-  version "7.0.35"
-  resolved "https://registry.yarnpkg.com/postcss/-/postcss-7.0.35.tgz#d2be00b998f7f211d8a276974079f2e92b970e24"
-  integrity sha512-3QT8bBJeX/S5zKTTjTCIjRF3If4avAT6kqxcASlTWEtAFCb9NH0OUxNDfgZSWdP5fJnBYCMEWkIFfWeugjzYMg==
+  version "7.0.36"
+  resolved "https://registry.yarnpkg.com/postcss/-/postcss-7.0.36.tgz#056f8cffa939662a8f5905950c07d5285644dfcb"
+  integrity sha512-BebJSIUMwJHRH0HAQoxN4u1CN86glsrwsW0q7T+/m44eXOUAxSNdHRkNZPYz5vVUbg17hFgOQDE7fZk7li3pZw==
   dependencies:
     chalk "^2.4.2"
     source-map "^0.6.1"
