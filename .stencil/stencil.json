@@ -15,11 +15,13 @@
       "artifactId": {
         "type": "string",
         "title": "Artifact ID",
-        "pattern": "^scm-.*-plugin$"
+        "pattern": "^scm-.*-plugin$",
+        "placeholder": "scm-example-plugin"
       },
       "name": {
         "type": "string",
-        "title": "Name"
+        "title": "Name",
+        "placeholder": "Example"
       },
       "version": {
         "type": "string",
@@ -28,12 +30,14 @@
       },
       "description": {
         "type": "string",
-        "title": "Description"
+        "title": "Description",
+        "placeholder": "Plugin to be shown as an example"
       },
       "package": {
         "type": "string",
         "title": "Package",
-        "pattern": "^[a-z][a-z0-9_]*(\\.[a-z0-9_]+)+[0-9a-z_]$"
+        "pattern": "^[a-z][a-z0-9_]*(\\.[a-z0-9_]+)+[0-9a-z_]$",
+        "placeholder": "com.cloudogu.example"
       }
     }
   },
