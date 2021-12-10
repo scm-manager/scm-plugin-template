@@ -1,22 +1,29 @@
 {
   "project": "{{.artifactId}}",
-  "files": [{
-    "source": "java",
-    "target": "src/main/java/{{.package | toJavaPath}}"
-  }],
+  "files": [
+    {
+      "source": "java",
+      "target": "src/main/java/{{.package | toJavaPath}}"
+    }
+  ],
   "copy": [
     "*.jar"
   ],
   "schema": {
     "title": "SCM-Manager Plugin",
     "type": "object",
-    "required": ["artifactId", "name", "version", "description", "package"],
+    "required": [
+      "artifactId",
+      "name",
+      "version",
+      "description",
+      "package"
+    ],
     "properties": {
       "artifactId": {
         "type": "string",
         "title": "Artifact ID",
-        "pattern": "^scm-.*-plugin$",
-        "placeholder": "scm-example-plugin"
+        "pattern": "^scm-.*-plugin$"
       },
       "name": {
         "type": "string",
@@ -43,10 +50,21 @@
   },
   "uiSchema": {
     "artifactId": {
-      "ui:autofocus": true
+      "ui:autofocus": true,
+      "ui:placeholder": "scm-example-plugin"
+    },
+    "name": {
+      "ui:placeholder": "Example"
+    },
+    "version:": {
+      "ui:placeholder": "1.0.0-SNAPSHOT"
     },
     "description": {
-      "ui:widget": "textarea"
+      "ui:widget": "textarea",
+      "ui:placeholder": "Plugin to be shown as example"
+    },
+    "package": {
+      "ui:placeholder": "com.cloudogu.example"
     }
   }
 }
