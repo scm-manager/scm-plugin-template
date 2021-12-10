@@ -14,20 +14,76 @@
   <title>Plugin Template</title>
 
   <style>
-    html, body, #root {
+    html, body {
       height: 100%;
       background-image: url('_static/background.svg');
       background-repeat: no-repeat;
       background-attachment: fixed;
       background-size: cover;
     }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .logo {
+      padding-top: 2rem;
+      text-align: center;
+      width: 100%;
+      display: block;
+      margin-bottom: 2rem;
+    }
+
+    .logo img {
+      width: 60%;
+    }
+
+    main {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .content {
+      width: 40rem;
+      padding: 2rem;
+      background-color: whitesmoke;
+      border-radius: 0.5rem;
+
+      box-shadow: 10px 10px 5px 0 #363636;
+
+      margin: 1rem
+    }
+    .imprint {
+     display: block;
+      width: 100%;
+      text-align: right;
+      padding: 1rem;
+      font-size: 0.75rem;
+      color: white;
+      text-decoration: none;
+    }
+
+    .imprint:hover {
+      color: white;
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
-<noscript>You need to enable JavaScript to run this app.</noscript>
-<div style="margin-top: 2rem;"></div>
-<div id="root"></div>
+<main>
+  <div class="content">
+    <a href="https://scm-manager.org/" class="logo">
+      <img src="_static/logo.svg" alt="SCM-Manager Logo">
+    </a>
+    <div id="root"></div>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+  </div>
+</main>
+<a class="imprint" target="_blank" href="https://scm-manager.org/imprint">
+  Imprint & Privacy
+</a>
 <script src="stencil.bundle.js"></script>
-
 </body>
 </html>

@@ -10,7 +10,7 @@
     "*.jar"
   ],
   "schema": {
-    "title": "SCM-Manager Plugin",
+    "title": "SCM-Manager Plugin Creator",
     "type": "object",
     "required": [
       "artifactId",
