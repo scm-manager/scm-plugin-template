@@ -23,7 +23,7 @@
  */
 
 plugins {
-  id 'org.scm-manager.smp' version '0.15.0'
+  id 'org.scm-manager.smp' version '0.16.3'
 }
 
 dependencies {
@@ -33,7 +33,7 @@ dependencies {
 }
 
 scmPlugin {
-  scmVersion = "2.27.2"
+  scmVersion = "3.0.0"
   displayName = "{{.name}}"
   description = "{{.description}}"
 
