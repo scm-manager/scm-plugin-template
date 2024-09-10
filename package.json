@@ -2,7 +2,7 @@
   "name": "@scm-manager/{{.artifactId}}",
   "private": true,
   "version": "{{.version}}",
-  "license": "MIT",
+  "license": "AGPLv3",
   "main": "./src/main/js/index.tsx",
   "scripts": {
     "build": "plugin-scripts build",
