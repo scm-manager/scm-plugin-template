@@ -2,5 +2,10 @@
   "extends": "@scm-manager/tsconfig",
   "include": [
     "./src/main/js"
-  ]
+  ],
+  "compilerOptions": {
+    "types": [
+      "vitest/globals"
+    ]
+  }
 }

@@ -7,23 +7,64 @@
   "scripts": {
     "build": "plugin-scripts build",
     "watch": "plugin-scripts watch",
-    "test": "jest",
-    "postinstall": "plugin-scripts postinstall"
+    "test": "vitest run",
+    "typecheck": "tsc",
+    "sync": "plugin-scripts sync",
+    "check": "plugin-scripts check"
   },
   "devDependencies": {
-    "@scm-manager/ui-plugins": "3.0.0",
-    "@scm-manager/plugin-scripts": "^1.2.2"
+    "@scm-manager/babel-preset": "^2.13.1",
+    "@scm-manager/eslint-config": "^2.18.2",
+    "@scm-manager/prettier-config": "^2.12.0",
+    "@scm-manager/tsconfig": "^3.0.0-alpha1",
+    "@scm-manager/plugin-scripts": "^2.0.0-pnpm.0",
+    "typescript": "^4.9.5",
+    "eslint": "^8.57.1",
+    "prettier": "^3.6.2",
+    "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-prettier": "^5.5.4",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "4.6.2",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "@typescript-eslint/eslint-plugin": "^8.45.0",
+    "@types/react": "^19.1.1",
+    "@types/react-dom": "^19.1.1",
+    "@scm-manager/ui-types": "4.0.0",
+    "vitest": "^4.0.18",
+    "@vitest/coverage-v8": "^4.0.18",
+    "jsdom": "^29.1.1",
+    "ci-info": "^4.4.0",
+    "i18next": "21"
   },
   "babel": {
     "presets": [
       "@scm-manager/babel-preset"
     ]
   },
-  "jest": {
-    "preset": "@scm-manager/jest-preset"
-  },
   "prettier": "@scm-manager/prettier-config",
   "eslintConfig": {
     "extends": "@scm-manager/eslint-config"
+  },
+  "packageManager": "pnpm@10.33.2",
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "react-router": "^7.13.0",
+    "react-router-dom": "^7.13.0",
+    "react-i18next": "11",
+    "styled-components": "^6.1.19",
+    "@scm-manager/ui-api": "4.0.0",
+    "@scm-manager/ui-components": "4.0.0",
+    "@scm-manager/ui-core": "4.0.0",
+    "@scm-manager/ui-extensions": "4.0.0",
+    "classnames": "^2.3.4",
+    "query-string": "6.14.1",
+    "react-hook-form": "^7.33.1",
+    "@tanstack/react-query": "^5.90.6",
+    "@scm-manager/ui-plugins": "4.0.0",
+    "@babel/runtime": "^7.19.0"
   }
 }
