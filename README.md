@@ -22,6 +22,7 @@ The plugin can be compiled and packaged with the following tasks:
 * build - `gradle build` - executes all checks, tests and builds the smp inclusive javadoc and source jar
 * test - `gradle test` - run all java tests
 * ui-test - `gradle ui-test` - run all ui tests
+* ui-sync - `./gradlew ui-sync` - synchronize frontend dependencies and refresh the lockfile
 * check - `gradle check` - executes all registered checks and tests (java and ui)
 * fix - `gradle fix` - fixes all fixable findings of the check task
 * smp - `gradle smp` - Builds the smp file, without the execution of checks and tests
@@ -60,7 +61,7 @@ A quick look at the files and directories you'll see in an SCM-Manager project.
     ├── README.md
     ├── settings.gradle
     ├── tsconfig.json
-    └── yarn.lock
+    └── pnpm-lock.yaml
 
 1.  **`node_modules/`**: This directory contains all modules of code that your project depends on (npm packages) are automatically installed.
 
@@ -95,7 +96,7 @@ A quick look at the files and directories you'll see in an SCM-Manager project.
 
 13. **`tsconfig.json`** This is the typescript configuration file.
 
-14. **`yarn.lock`**: This is the ui dependency configuration.
+14. **`pnpm-lock.yaml`**: This is the ui dependency configuration.
 
 ## Need help?
 
@@ -104,3 +105,30 @@ Looking for more guidance? Full documentation lives on our [homepage](https://sc
 - **Community Support** - Contact the SCM-Manager support team for questions about SCM-Manager, to report bugs or to request features through the official channels. [Find more about this here](https://scm-manager.org/support/).
 
 - **Enterprise Support** - Do you require support with the integration of SCM-Manager into your processes, with the customization of the tool or simply a service level agreement (SLA)? **Contact our development partner Cloudogu! Their team is looking forward to discussing your individual requirements with you and will be more than happy to give you a quote.** [Request Enterprise Support](https://cloudogu.com/en/scm-manager-enterprise/).
+
+## Frontend setup for SCM-Manager 4.x
+
+With Java available, run `./gradlew build`. Gradle manages Node and pnpm, installs
+the selected metadata, synchronizes shared dependencies and required build tools,
+and creates or refreshes `pnpm-lock.yaml` before verification and compilation.
+Review and commit the changed manifest and lockfile together.
+
+After changing your selected `@scm-manager/ui-plugins`, run `./gradlew build` as
+usual. The Gradle SMP plugin runs synchronization automatically for builds, checks
+and frontend tasks. A newly generated plugin does not need an existing lockfile
+or a separate pnpm command before its first build.
+Use `./gradlew ui-sync` for the same preparation without a full build.
+The final installation uses `--frozen-lockfile` after preparation; there is no
+recursive postinstall synchronization. mise is optional for supplying Java or
+running direct frontend commands.
+
+This migration template currently selects prerelease plugin tooling. Update the
+Gradle SMP plugin and plugin-scripts pins to the coordinated published release
+before making the 4.0 template available through the generator.
+
+For local testing before the SMP snapshot is published, run
+`./gradlew publishToMavenLocal` in the `gradle-smp-plugin` checkout first.
+Generated plugins resolve that artifact through `mavenLocal()` in `settings.gradle`,
+then fall back to the Gradle plugin portal. They do not require a sibling SMP
+checkout. The SCM UI packages and plugin-scripts must also be available from the
+selected registry or supplied through local pnpm overrides.
