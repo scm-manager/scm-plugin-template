@@ -114,7 +114,10 @@ and creates or refreshes `pnpm-lock.yaml` before verification and compilation.
 Review and commit the changed manifest and lockfile together.
 
 After changing your selected `@scm-manager/ui-plugins`, run `./gradlew build` as
-usual. Use `./gradlew ui-sync` for the same preparation without a full build.
+usual. The Gradle SMP plugin runs synchronization automatically for builds, checks
+and frontend tasks. A newly generated plugin does not need an existing lockfile
+or a separate pnpm command before its first build.
+Use `./gradlew ui-sync` for the same preparation without a full build.
 The final installation uses `--frozen-lockfile` after preparation; there is no
 recursive postinstall synchronization. mise is optional for supplying Java or
 running direct frontend commands.
@@ -122,3 +125,10 @@ running direct frontend commands.
 This migration template currently selects prerelease plugin tooling. Update the
 Gradle SMP plugin and plugin-scripts pins to the coordinated published release
 before making the 4.0 template available through the generator.
+
+For local testing before the SMP snapshot is published, run
+`./gradlew publishToMavenLocal` in the `gradle-smp-plugin` checkout first.
+Generated plugins resolve that artifact through `mavenLocal()` in `settings.gradle`,
+then fall back to the Gradle plugin portal. They do not require a sibling SMP
+checkout. The SCM UI packages and plugin-scripts must also be available from the
+selected registry or supplied through local pnpm overrides.
